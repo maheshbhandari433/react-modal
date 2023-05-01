@@ -7,7 +7,12 @@ import {Component} from 'react'
 class App extends Component {
 
   state = {
-    showModal: false
+    showModal: false,
+    firstname: "",
+    lastname: "",
+    phonenum: "",
+    role: "",
+    message: ""
   }
 
   modalHandler = (e) => {
@@ -18,17 +23,21 @@ class App extends Component {
     })
   }
 
+  changeHandler = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
   render () {
 
   return (
 
     <div className="App">
 
-      <Form click={this.modalHandler}/> 
-     <Preview />
-    {this.state.showModal && <Model/>} 
-    
-    
+      <Form  handler={this.changeHandler}/> 
+      <Preview submit={this.modalHandler} {...this.state}/>
+      {this.state.showModal && <Model click={this.modalHandler} {...this.state} />} 
 
     </div>
   );
