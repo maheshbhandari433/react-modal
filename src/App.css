@@ -93,4 +93,12 @@ width: 150px;
   margin-left: 40px;
 }
 
+.post {
+  text-align: center;
+  width: 100vw;
+}
+
+h2, li {
+  margin: 1em;
+}
 

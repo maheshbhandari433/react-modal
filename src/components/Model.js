@@ -26,7 +26,7 @@ const Model = (props) => {
 
             <div className="buttons">
             <div className="button">
-            <button onClick={props.click}>Yes, sure</button>
+            <button onClick={props.yesClick}>Yes, sure</button>
             </div>
 
             <div className="button">
